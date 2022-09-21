@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    const int a=20; //allocat size 20 in the memory for constant variable a
+    const int *b;//creat pointer with type constant int
+    b=&a;
+    cout<<"old value of value a= "<<*b<<endl;
+    //*b=30; we cannnot change a const value 
+    int *c=const_cast<int *>(b);// now we can change constant pointer value through cont casting
+    *c=40;
+    cout<<"new value of b "<<*b<<endl;
+}
