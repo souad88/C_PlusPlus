@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class a
+{ private:
+     string word;
+      
+    
+    
+      
+ public:
+      a(){}
+     a(string w):word(w)
+
+     {
+        cout<<"old word "<<word;
+        const_cast<a*>(this)->word="g";
+     }//parametrized const 
+   
+  string  display()
+      { return word;
+
+      }
+};
+
+int main()
+{ 
+    a wrd("llmm");
+  
+ cout<<"new word"<< wrd.display();
+    return 0;
+}
