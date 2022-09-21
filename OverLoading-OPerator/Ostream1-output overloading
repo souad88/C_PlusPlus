@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class display
+{  public:
+    string w;
+    public:
+    display(){}
+
+    display(string w_):w(w_){}
+      
+    void display_()  
+      {
+      cout<<"this lesson is to explain how to print value in classes through An object of class or apointer to aclass";
+      } 
+};
+ostream &operator<<(ostream &out,display *d)
+{ out<<d->w;
+  return out;
+
+}
+int main()
+ { display b("Hellow!");
+  
+  cout<<&b;
+  b.display_();
+    return 0;
+ }
