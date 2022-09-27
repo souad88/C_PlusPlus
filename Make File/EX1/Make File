@@ -1,0 +1,22 @@
+#files.o ->generates file.exe excutable files
+#files.cpp and files.h ->generates files.o
+#output:main.o class.o
+#<TAP> g++ main.o class.o -o output
+#main.o:main.cpp
+#<TAP> g++ -c main.cpp
+#class.o:class.cpp class.h
+#<TAP>g++ -c class.cpp
+#_______________________________TERMINAL
+#ls
+#make
+#ls ... you will find .o fils and excutable file.exe
+
+
+pr:main.o prnt.o
+	g++ main.o prnt.o -o pr
+main.o:main.cpp
+	g++ -c main.cpp
+prnt.o:prnt.cpp prnt.h
+	g++ -c prnt.cpp
+clear:
+	rm*.o pr
