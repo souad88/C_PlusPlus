@@ -1,0 +1,18 @@
+//IN CMATH liberary what is differrence between [ceil] and [floor]
+//ceil(x) : بتقرب الرقم الكسري لأكبر رقم 
+//        :ceil(34.23)=35.0
+//floor(x) : بتقرب الرقم الكسري لأصغر رقم
+//         : ceil(34.23)=34.0
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+        int x=3.24;
+        int y=3.75;
+        cout<<"ceil function x=3.24 "<<floor(x)<<"floor function  "<<ceil(x)<<endl;
+        cout<<"Floor function y=3.75  "<<floor(y)<<"ceil function  "<<ceil(y)<<endl;
+        cout<<"absolute of x   "<<abs(x)<<endl;
+        
+        return 0;
+}
