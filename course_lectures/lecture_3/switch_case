@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+namespace display
+{
+
+}
+int main()
+{
+        char answer;
+        string name;
+        cout<<"hellow!  let's know what your name ?"<<endl;
+        cin>>name;
+        cout<<"OH! i love this name  "<<name<<"SO much "<<endl;
+        cout<<name<<"Let's start a funny game, i will ask you some questions about your favorite things"<<endl;
+        cout<<"and you have to answer me with (y) if you love this thing,and if you donnot answer (n)"<<endl;
+        cout<<"at the end of the questions i will answer you if you will be my best friend or not "<<endl;
+        cout<<name<<"Let's start the game :) "<<endl;
+        cout<<"1-do you like  [black,blue,baby blue,white,pink,purble] colors?"<<endl;
+        cin>>answer;
+        switch(answer)
+        {   
+                case 'y':
+                    cout<<"i love these colors too ! Mmmm i think black and white can detect other colors"<<endl;
+                    cout<<"blue and baby blue are the colors of the sky in moorning and the night , and they"<<endl;
+                    cout<<"are the color of the sea,Pink and purble are aromantic colors"<<endl;
+                    cout<<"i think that you will be my friend ;)"<<endl;
+                break;
+                
+                case 'n':
+                cout<<"Oh !"<<endl;
+                break;
+
+        }
+        return 0;
+}
