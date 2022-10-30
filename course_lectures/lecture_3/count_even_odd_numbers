@@ -1,0 +1,57 @@
+//print even number
+#include<iostream>
+using namespace std;
+namespace count_even
+{
+    void count()
+    { for(int i=0;i<=10;i++)
+        {
+                if(i%2==0)
+                {
+                    cout<<"even numbers"<<i<<endl;
+                }
+        }
+
+    }
+}
+namespace count_odd
+{
+    void count()
+    {
+            for(int i=0;i<=10;i++)
+            {       if(i%2==1)
+                    {
+                        cout<<"odd numbers "<<i<<endl;
+                    }
+            }
+    }
+}
+void user_enter()
+{       
+    
+         string word;
+         cout<<"Do you want EVEN  or ODD numbers ? write (odd/even)"<<endl;
+         cin>>word;
+        
+        if(word=="even")
+        {
+            count_even::count();
+        }
+        else if(word=="odd")
+        {    
+            count_odd::count();
+        }
+        else
+        {
+            cout<<"failed , enter a correct word!"<<endl;
+            user_enter();//recursive function
+        }    
+
+}
+int main()
+{   
+    user_enter();  
+    
+    return 0;
+
+}
