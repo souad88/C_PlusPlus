@@ -1,0 +1,40 @@
+//calculator
+//add-sub-mult~-division-modulus
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main ()
+{    
+     float frst_num;
+     float scnd_num;
+     char operation;
+     cout<<"frst num= "<<endl;
+     cin>>frst_num;
+     cout<<"second num= "<<endl;
+     cin>>scnd_num;
+     cout<<"Operation is "<<endl;
+     if(operation=='+')
+     {
+            cout<<frst_num+scnd_num;
+     
+     }
+     else if(operation=='-')
+     {
+            cout<<frst_num-scnd_num;
+     }
+     else if(operation=='/')
+     {
+            cout<<frst_num/scnd_num;
+     }
+     else if(operation=='*')
+     {
+            cout<<frst_num*scnd_num;
+     }
+     //else if(operation=='%')
+     //{
+     //       cout<<;
+     //}
+     
+        
+     return 0;
+}
