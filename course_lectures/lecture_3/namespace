@@ -1,0 +1,18 @@
+//we can use variables with the same name but in different scopes
+//type of scops :1-Glopal Scope: variables defined outside all functions
+//               2-local Scope: variable defined inside the scope
+#include<iostream>
+using namespace std;
+namespace d //first name space
+{
+  int number=4;
+}
+namespace f //seconed name space
+{ int number=30;
+
+}
+int main()
+{   cout<<"number in scope 1  "<<d::number<<endl;
+    cout<<"number in scope 2  "<<f::number<<endl;
+    return 0;
+}
