@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int num;
+    int num_square;
+    int num_cube;
+    cout<<"enter number"<<endl;
+    cin>>num;
+    num_square=pow(num,2);
+    cout<<"the square of the number is = "<<num_square<<endl;
+    num_cube=pow(num,3);
+    cout<<"number cube =   "<<num_cube<<endl;
+
+}
