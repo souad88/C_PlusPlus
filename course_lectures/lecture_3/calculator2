@@ -1,0 +1,97 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+namespace calculator
+{
+        void add(float a,float b)
+        {
+                cout<<a+b<<endl;
+        }
+      
+      
+        void sub(float a,float b)
+        {
+                cout<<a-b<<endl;
+        }
+      
+        void multi_(float a,float b)
+        {
+                cout<<a*b<<endl;
+        }
+      
+        void division(float a,float b)
+        {
+                cout<<a/b<<endl;
+        }
+      
+        void number_power(float num,int power_num)
+        {
+            cout<<pow(num,power_num)<<endl;
+        }
+      
+        void reminder_division(float a,float b)
+        {
+            cout<<remainder(a,b)<<endl;
+        }
+
+
+}
+int main()
+{
+        float a,b;
+        int power_num;
+        string operation;
+        cout<<"enter one of these Operations (+ ,-,/,*,Power,Remainder) "<<endl;
+        cin>>operation;
+        if(operation=="+")
+        {    cout<<"what is the first number? "<<endl;
+             cin>>a;
+             cout<<"what is the seconed number?  "<<endl;
+             cin>>b;
+             calculator::add(a,b);
+        }
+        else if(operation=="-")
+        {       
+             cout<<"what is the first number? "<<endl;
+             cin>>a;
+             cout<<"what is the seconed number?  "<<endl;
+             cin>>b;
+             calculator::sub(a,b);
+        }
+        else if(operation=="/")
+        {
+                cout<<"what is the first number? "<<endl;
+                cin>>a;
+                cout<<"what is the seconed number?  "<<endl;
+                cin>>b;
+            
+                calculator::division(a,b);
+        }
+        else if(operation=="*")
+        {
+                cout<<"what is the first number? "<<endl;
+                cin>>a;
+                cout<<"what is the seconed number?  "<<endl;
+                cin>>b;
+                calculator::multi_(a,b);
+        }
+        else if(operation=="Power")
+        {       cout<<"enter the number"<<endl;
+                cin>>a;
+                cout<<"what is the power of the number? "<<endl;
+                cin>>power_num;
+                calculator::number_power(a,power_num);
+        }
+
+        else if(operation=="Remainder")
+        {
+                cout<<"what is the first number? "<<endl;
+                 cin>>a;
+                cout<<"what is the seconed number?  "<<endl;
+                cin>>b;
+        
+                calculator::reminder_division(a,b);
+        }
+
+return 0;
+}
