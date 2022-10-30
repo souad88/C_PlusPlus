@@ -1,0 +1,18 @@
+//difference between postfix and pre-fix:
+//pre_fix : a=++val;   increment val +1 , then assign val in a ; a+1=val+1;
+//post_fix: a=val++;   assign val in a,then increment val; a=val  val=val+1
+//the same in :a=--val; or a=val--;
+#include<iostream>
+using namespace std;
+int main()
+{       int a=0;
+        int val=0;
+        val=3;
+        //pre_fix
+        a=++val;
+        cout<<"a= "<<a<<"val= "<<val<<endl;
+        //post_fix
+        a=val++;
+        cout<<"a= "<<a<<"val=  "<<val<<endl;
+        
+        return 0;
