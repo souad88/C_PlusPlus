@@ -1,0 +1,126 @@
+//vending machine:
+//welcome screen
+//ask user which things they are interested to buy:
+//cinema ticket
+//popcorn
+//pepsi
+//calculate total
+//take money
+//return change
+//-----------
+//namespace:functions
+#include <iostream>
+using namespace std;
+namespace vending_mach
+{       string ans1,ans2,ans3;
+        int t_num,pop_num,pep_num;
+        float t_price=250;
+        float pop_price=15;
+        float pep_price=15;
+        void pop_corn();
+        void pepsi();
+        void calculate();
+        void say_hellow()
+        {   string name;
+            cout<<"what's your name ?"<<endl;
+            cin>>name;
+            cout<<"Hi  " <<name<<" how are you today ? i wish you a nice day!"<<endl;
+
+        }
+        
+        void cinema_list()
+        {       
+                cout<<"Here is the list for today"<<endl;
+                cout<<"Ticket price=250 L.E"<<endl;
+                cout<<"pop-corn price =15 L.E " <<endl;
+                cout<<"PEPSI price =15 L.E "    <<endl;
+
+        }
+        
+        void cinema_ticket()
+        {       
+         
+         cout<<"Do you need a ticket ?,answer[yes/no]"<<endl;
+         cin>>ans1;
+            if (ans1=="yes")
+            {   
+                    cout<<"how many tickets do you need ?"<<endl;
+                    cin>>t_num;
+                    pop_corn();
+
+            }
+            else if(ans1=="no")
+            {
+                    cout<<"OK ,i wish you a nice day ,Good bye!"<<endl;
+            }
+            else
+            {
+                cout<<"you entered a wrong answer!"<<endl;
+                cinema_ticket();
+            }
+        }
+
+    void pop_corn()
+     {
+
+        cout<<"Do you need a POP_Corn, answer[yes/no]"<<endl;
+        cin>>ans2;
+        if (ans2=="yes")
+        {
+                cout<<"How many pop_corn do you need ?"<<endl;
+                cin>>pop_num;
+                pepsi();
+        }
+        else if(ans2=="no")
+        {       pop_num=0;
+                pepsi();
+        }
+        else
+        {
+                cout<<"you entered a wrong answer"<<endl;
+                pop_corn();
+        }
+
+
+     }    
+
+    void pepsi()
+    {
+            cout<<"Do you need a pepsi ?answer[yes/no]"<<endl;
+            cin>>ans3;
+            if(ans3=="yes")
+            {   
+                cout<<"how many pepsi do you need?"<<endl;
+                cin>>pep_num;
+            
+            }
+            else if(ans3=="no")
+            {      pep_num=0; 
+                    calculate();
+
+            }
+            else
+            {
+               cout<<"you entered a wrong answer"<<endl;
+               pepsi();
+            }
+
+    } 
+
+     void calculate()
+    {
+          float total_p;
+         total_p=(t_price*t_num)+(pep_num*pep_price)+(pop_price*pop_num);
+         cout<<"total price =  "<<total_p<<endl;
+    }
+
+}
+
+int main()
+{ 
+        vending_mach::say_hellow();
+        vending_mach::cinema_list();
+        vending_mach::cinema_ticket();
+        vending_mach::calculate();
+    return 0;
+}
