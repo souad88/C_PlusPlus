@@ -1,0 +1,12 @@
+//array_name.front(); returnes the first element of the array
+//array_name.back(); returnes the last element of the array
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+        array<int,3>num={5,6,7};
+        cout<<"first element of array"<<num.front()<<endl;
+        cout<<"last element of array "<<num.back()<<endl;
+        return 0;
+}
