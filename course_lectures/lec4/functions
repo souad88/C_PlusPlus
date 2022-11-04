@@ -1,0 +1,26 @@
+//functions :
+//1-pass by value . [Function definition : int sum(int x,int y); .#### Function call: sum(x,y);         ]
+//2-pass by address. [Function defintion : int sum(int *x,int *y); . ##### function call: sum(&x,&y);   ]
+//3-pass by reference.[Function defintion : int sum(int &x,int &y); ##### function call : sum(x,y);     ]
+///////////////////////
+//simple example on functions:pass by value
+#include<iostream>
+using namespace std;
+void calculation(int a,int b,int sub,int add)
+{   
+    sub=a-b;
+    add=a+b;
+    cout<<"a= "<<a<<endl;
+    cout<<"b= "<<b<<endl;
+    cout<<"a-b= "<<sub<<endl;
+    cout<<"a+b= "<<add<<endl;
+}
+int main()
+{
+    int a=3;
+    int b=4;
+    int sub=0;
+    int add=0;
+    calculation(a,b,sub,add);
+    
+}
