@@ -1,0 +1,14 @@
+//array_name.empty()->returns if array is empty or not?
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+
+        array<int,4>nums={4,6,7,9};
+        array<string,0>names;
+        cout<<"is array called nums Empty?  "<<(nums.empty()) <<endl;
+        cout<<"is the array called names Empty? "<<(names.empty())<<endl;
+        
+        return 0;
+}
