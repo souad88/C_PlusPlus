@@ -1,0 +1,24 @@
+//functions :
+//1-pass by value . [Function definition : int sum(int x,int y); .#### Function call: sum(x,y);         ]
+//2-pass by address. [Function defintion : int sum(int *x,int *y); . ##### function call: sum(&x,&y);   ]
+//3-pass by reference.[Function defintion : int sum(int &x,int &y); ##### function call : sum(x,y);     ]
+///////////////////////
+///ex: swap function (pass by address)
+#include<iostream>
+using namespace std;
+void swap(int *a,int *b)
+        {  cout<<"old value (a,b) "<<"("<<*a<<","<<*b<<")"<<endl;
+          int temp;
+          temp=*a;
+          *a=*b;
+          *b=temp;
+          cout<<"new value (a,b) "<<"("<<*a<<","<<*b<<")"<<endl;
+        }
+int main()
+{
+        int a=4;
+        int b=5;
+        void swap(int *,int*);
+        swap(&a,&b); //pass address of a,b
+        return 0;
+}
