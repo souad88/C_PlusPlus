@@ -1,0 +1,27 @@
+//Pointers: is a variable ,but it stores  address of another variable
+//READ the following notes to understand the pointer ///////////////////////////////////
+
+//signs : 1- [*]  this sign referes to a variable called pointer
+//        2- [&] this sign referes to an address of avariable
+//ex:  int i=3; -> i is avariable
+//    *ptr -> avariable called ptr -> [*] mean that this variable ptr is apointer that store an address of another varible, and * goes to value stored in the address in the pointer
+//     ptr ->value in it is the address of i
+//     &i-> refer to the address of i 
+//     *ptr=&i -> means that the address of variable [i] is stored in the variable *ptr
+//     &ptr ->refer to the address of the variable pointer *ptr   
+#include<iostream>
+using namespace std;
+
+
+
+int main()
+{
+        int i=34;
+        int *ptr=&i; //variable called *ptr ,store address of variable i through &
+        cout<<"i= "<<i<<endl; //value of variable i
+        cout<<"&i= "<<&i<<endl; //address of variable i
+        cout<<"*ptr= "<<*ptr<<endl;//* goes to the address in this pointer and print the value of i
+        cout<<"ptr= "<<ptr<<endl; //value of variable *ptr ...that is the address of variable i
+        cout<<"&ptr= "<<&ptr<<endl; //the address of variable *ptr
+
+}
