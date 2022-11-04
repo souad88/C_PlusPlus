@@ -1,0 +1,19 @@
+//de-reference : if [pointer *A] store the address of variable [X] , and [X=6], and we want to change the value 6 to 8, 
+//               we can change value of variable [X] by two ways direct-assignment[ex:- give another value in X=8] or
+//               in-direct-assignment by the dereference [*A=8]
+//               compiler goes to pointer A and go to address in pointer A to X and
+//               change value from 6 to 8
+
+#include<iostream>
+using namespace  std;
+int main()
+{
+        int i1=2;
+        int i2=3;
+        int *ptr1=&i1;
+        int *ptr2=&i2;
+       // *ptr1=8;//dereference ->indirect assignment 
+        *ptr1=*ptr2;
+        cout<<i1<<endl;
+        return 0;
+}
