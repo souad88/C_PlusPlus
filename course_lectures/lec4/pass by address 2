@@ -1,0 +1,31 @@
+//functions :
+//1-pass by value . [Function definition : int sum(int x,int y); .#### Function call: sum(x,y);         ]
+//2-pass by address. [Function defintion : int sum(int *x,int *y); . ##### function call: sum(&x,&y);   ]
+//3-pass by reference.[Function defintion : int sum(int &x,int &y); ##### function call : sum(x,y);     ] an allias of variable
+///////////////////////
+
+//ex: write a code to add and subtract two numbers  in a function called calc ,then print the result in the main function
+#include<iostream>
+using namespace std;
+void calc(int *a,int *b,int *add,int *sub)
+{
+       
+        *add=*a+*b;
+        *sub=*a-*b;   
+}
+
+int main()
+{        
+    
+         int a=4;
+         int b=5;
+         int sub=0;
+         int add=0;
+
+         void calc(int *,int *, int * ,int *);
+         calc(&a,&b,&add,&sub);
+         cout<<"a= "<<a<<" b= "<<b<<endl;
+         cout<<"a+b = "<<add<<endl;
+         cout<<"a-b= "<<sub<<endl;
+         return 0;
+}
