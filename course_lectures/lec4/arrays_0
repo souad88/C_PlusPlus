@@ -1,0 +1,41 @@
+//Address of array is the address of the first element in it
+//size of array=size of one data type element in array *number of elements in the array
+
+//one dimension array ->array_data_type array_name [size];-> ex:int num[4];
+//two dimension array->array_data_type array_name[number of rows][number of column];->ex:- int d[2][3];
+
+#include<iostream>
+using namespace std;
+int main()
+{   
+        int arr1[3];
+        arr1[0]=1;
+        arr1[1]=5;
+        arr1[2]=7;
+        arr1[3]=90;
+        cout<<"One dimension array  "<<endl;
+        for(int i=0;i<4;i++)
+        {
+              cout<<arr1[i]<<"  ";
+        }
+        cout<<"address of array "<<&arr1<<"  address of the first element in array "<<&arr1[0]<<endl;
+        cout<<"size of one element in arr1  "<<sizeof(arr1[0])<<"size of totall array arr1 "<<sizeof(arr1)<<endl;
+        int ar2[2][1];
+        ar2[0][0]=22;
+        ar2[1][0]=10;
+        ar2[2][0]=20;
+        ar2[0][1]=23;
+        ar2[1][1]=11;
+        ar2[2][1]=21;
+        cout<<"two-dimension array  "<<endl;
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0; j<2;j++)
+            {
+               cout<<ar2[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+
+    return 0;
+}
