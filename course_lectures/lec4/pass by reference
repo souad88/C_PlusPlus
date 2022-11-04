@@ -1,0 +1,34 @@
+//functions :
+//1-pass by value . [Function definition : int sum(int x,int y); .#### Function call: sum(x,y);         ]
+//2-pass by address. [Function defintion : int sum(int *x,int *y); . ##### function call: sum(&x,&y);   ]
+//3-pass by reference.[Function defintion : int sum(int &x,int &y); ##### function call : sum(x,y);     ]
+///////////////////////
+//Why use call by Reference ?:
+//1- when we pass large structures and class instances ,instead of
+//   copy them every time and allocate another addresses in 
+//   the memory .(pass by reference reduce consuming a large space in the memory)
+//2-when we want to convert a parameter in afunction arguments to be const only in this function
+//  ex:- void numbers(const int &num1,const float &num2) 
+
+
+//////////////////
+#include<iostream>
+using namespace std;
+
+void newvalue_x(string &,string &);//another allias of variables
+int main()
+{       
+        string first_n="Layla";
+        string seconed_n="youssif";
+        cout<<"Old first name : "<<first_n<<endl;
+        cout<<"Old seconed name : "<<seconed_n<<endl;
+        newvalue_x(first_n,seconed_n);
+        cout<<"New first name : "<<first_n<<endl;
+        cout<<"New seconed name : "<<seconed_n<<endl;
+        return 0;
+}
+void newvalue_x(string &f_name,string &s_name )
+{
+        f_name="fayrouz";
+        s_name="Muhammed";
+}
