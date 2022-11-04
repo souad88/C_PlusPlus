@@ -1,0 +1,27 @@
+//how to use for ranged based loop
+// if we have array called num
+//we can use this for ranged loop -> for(int n:num)->means that n=each element in num array
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+        array<int,3>num={1,2,3};
+        for(int n:num)
+        {
+                cout<<n<<endl;
+        }
+
+        //how to change any original element in the array : you have to do it using reference
+        for(int &n:num)
+        {
+                n=2;
+
+        } 
+
+        for(int n:num)
+        {
+                cout<<n<<endl;
+        }
+        return 0;
+}
