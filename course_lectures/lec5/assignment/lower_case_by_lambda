@@ -1,0 +1,28 @@
+//convert all UPPER_case_letter to LOWER_case_letter using LAMBDA_function
+//string: "AUstralian FrencH WimBleDon Us";
+#include<iostream>
+#include<array>
+#include<algorithm>
+#include<iterator>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+        
+        //char word[]={"AUstralian FrencH WimBleDon Us"};
+        string word="AUstralian FrencH WimBleDon Us";
+        //cout<<word[1];
+        for_each(word.begin(),word.end(),[](char &letter_)->void{
+                                                                    letter_=tolower(letter_);
+                                                                    //return letter_;
+                                                                    cout<<letter_;
+                                                                }
+                );
+
+       // for(char a:word)
+        //{
+        //    cout<<a;
+       // }        
+        return 0;
+}
