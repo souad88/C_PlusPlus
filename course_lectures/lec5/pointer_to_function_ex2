@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{       int res;
+        int add(int,int);
+        int sub(int,int);
+        int(*res_ptr)(int,int);
+        res_ptr=&add;
+        res=(*res_ptr)(3,4);
+        cout<<"add= "<<res<<endl;
+        ///
+        res_ptr=&sub;
+        res=(*res_ptr)(4,3);
+        cout<<"sub = "<<res<<endl;
+        return 0;
+}
+int add(int a,int b)
+{
+
+        return a+b;
+}
+int sub(int a,int b)
+{
+        return a-b;
+}
