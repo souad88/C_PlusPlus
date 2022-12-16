@@ -1,0 +1,33 @@
+//pointer to function
+//declaration : 1-void funct_name(argument_ttype);
+//              2-void (* funct_ptr_name)(func_argument_types)=&funct_name;
+//invoking_function: - (*funct_ptr_name)(value of argument)
+ #include<iostream>
+ using namespace std;
+
+
+ int main()
+ {      
+
+
+        void display(string );
+        void(* display_ptr)(string);
+        display_ptr=&display;
+        
+        (*display_ptr)("Fayrouz");
+        void display2(string);
+        //the same function pointer point to another function with the sam arguments
+        display_ptr=&display2; 
+        (*display_ptr)("Engineer");
+        return 0;
+ }
+ void display(string name)
+ {
+        cout<<name<<endl;
+        
+        
+ }
+ void display2(string jop)
+ {
+        cout<<jop;
+ }
