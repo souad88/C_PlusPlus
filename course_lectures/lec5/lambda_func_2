@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+        int add(int ,int);
+        int a=4;
+        int b=5;
+        add(a,b);
+        
+        cout<<add;
+        return 0;
+}
+int add(int a,int b)
+{
+        int c=a+b;
+        auto lambda=[](string word)->void{
+                                                cout<<word;
+                                         };
+        lambda("the result of add a+b= ");
+        return c;
+}
