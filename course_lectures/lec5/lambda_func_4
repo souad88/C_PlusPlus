@@ -1,0 +1,26 @@
+//Sort element_of_array using lambda with ternary operator
+//Ternary operator : Condition?True:False
+//                 :EX: a>b?a:b; // if a>b is true then return a ,else return b 
+//Sort_function: is  afunction in Algorithm_liberary
+//              sort(array_name.begin(),array_name.end(),function that return with the bigger or the lower number in array)                 
+#include<iostream>
+#include<array>
+#include<algorithm>
+using namespace std;
+//int comparasion_a_b(int a,int b)
+//{
+//            return a>b?a:b;
+//}
+int main()
+{
+    array<int,3>num={55,21,13};
+ // sort(num.begin(),num.end(),comparasion_a_b);
+    sort(num.begin(),num.end(),[](int a,int b)->int{
+                                                     return a>b?a:b;
+                                                    });
+    for(auto i:num)
+    {
+            cout<<i<<endl;
+    }
+
+}
