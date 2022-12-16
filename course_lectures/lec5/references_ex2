@@ -1,0 +1,31 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+
+
+int main ()
+{
+        array<int,4> num1={1,2,3,4};
+        array<int,4> num2={1,2,3,4};
+        for (int i:num2)
+        {
+                i+=2;
+        }
+        for(int i:num2)
+        {
+                cout<<i<<endl; //it willnot change
+        }
+        //-------------------------------
+        //using reference
+        for(int &i:num1)
+        {
+                i+=2;
+                
+        }
+        for(int i:num1)
+        {
+                cout<<i<<endl;
+        }
+        return 0;
+}
