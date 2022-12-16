@@ -1,0 +1,32 @@
+#include <iostream>
+#include <array>
+using namespace std;
+int main ()
+{
+     void swap_array(int *,int *);
+     int a[3]={1,2,3};
+     int b[3]={6,7,8};   
+     
+     for(int i=0; i<3;i++)
+        {
+               swap_array(&a[i],&b[i]);
+        }
+        
+     for(int i=0; i<3; i++)
+     {
+            cout<<a[i]<<endl;
+            cout<<b[i]<<endl;
+     }    
+        
+        return 0;
+
+}
+void swap_array(int *a,int *b)
+{
+
+        int temp;
+        temp=*a;
+        *a=*b;
+        *b=temp;
+        
+}
