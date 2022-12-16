@@ -1,0 +1,52 @@
+//in this EXample we will Focus on the Differences between using 
+//capture by val , Capture by reference ,and no capturing
+//capture all by ref :[&](int )->int{return a+b; };
+//capture all by val :[=](int )->int {return a+b;};
+//---------------------------------------------------------
+//EX: apply the multiplication *2 on an array elements using:
+//                                                      1-capture by ref
+//                                                      2-capture by val
+//                                                      3-no capturing
+//-----------------------------------------------
+#include<iostream>
+#include<array>
+#include<algorithm>
+using namespace std;
+int main()
+{
+        array<int,4> num={5,6,7,8};
+        int mult=0;
+        //1-capturing all by ref: in lambda_scope
+        //                      1-we can read declared_variables outside
+        //                        the scope of lambda.
+        //                      2-we can modify and change value 
+        //                         of declared_variables outside the scope of lambda. 
+        for_each(num.begin(),num.end(),[&](int a)->void{
+                                                        mult=2;
+                                                     
+                                                     a*=mult;
+                                                     cout<<a<<endl;
+                                                     }
+                );
+ 
+        //2-capturing by val: in lambda_scope
+        //                  1-we can read declared_variables outside lambda_scope
+        //                  2- we cannot change declared_variables outside lambda_scope
+        for_each(num.begin(),num.end(),[=](int a)->void{
+
+                                                        //mult=3;
+                                                        a*=mult;
+                                                       cout<<a<<endl; 
+                                                      }
+                );
+
+        //3-No_capturing: in lambda_scope 
+        //                 we cannot read the declared_variables outside
+        //                 the lambda_scope
+        for_each(num.begin(),num.end(),[](int a)->void{
+
+                                                       //a*=mult; xxxxx we cannot read it 
+                                                        }
+                );        
+        return 0;
+}
