@@ -1,0 +1,29 @@
+//lambda _expression
+//auto lambda=[](int a)->int {return a-1;};
+//auto lambda : is apointer to function
+//[]:start of lambda
+//(int a):parameter of lambda
+//->int :return type
+//{return a-1;}: lambda_function_body
+//-------------------
+//How to use it ???:
+//we have to invoke it in the same scope that we defined the lambda_func in it 
+//EX:-
+#include <iostream>
+using namespace std ;
+int main()
+{
+
+        auto lambda=[](int a)->int{ 
+
+                                        int b=a*2;
+                                        return b;
+                                  };
+
+     int d=lambda(22); //invoke lambda in the main scope
+
+     cout<<d<<endl;
+
+    return 0;
+
+}
