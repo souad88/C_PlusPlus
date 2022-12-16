@@ -1,0 +1,17 @@
+int main()
+{
+    int x=3;
+    int y=4;
+    void swap(int *,int *);
+    cout<<"old valu of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
+    swap(&x,&y);
+    cout<<"new valu of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
+    return 0;
+}
+void swap(int *x,int *y)
+{
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+}
