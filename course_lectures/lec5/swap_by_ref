@@ -1,17 +1,21 @@
+//swap method with using reference swap(x,y)
+//reference : is another allias of the variable 
+//              ==ANOTHER name of the same variable and the same address
+#include <iostream>
+using namespace std;
 int main()
 {
     int x=3;
     int y=4;
-    void swap(int *,int *);
-    cout<<"old valu of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
-    swap(&x,&y);
-    cout<<"new valu of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
-    return 0;
+    void swap(int &,int &);
+    cout<<"old val of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
+    swap(x,y);
+    cout<<"new val of (x,y)"<<"("<<x<<","<<y<<")"<<endl;
 }
-void swap(int *x,int *y)
+void swap(int &x,int &y )
 {
     int temp;
-    temp=*x;
-    *x=*y;
-    *y=temp;
+    temp=x;
+    x=y;
+    y=temp;
 }
